@@ -3,7 +3,7 @@ name: Github Actions Practice
 on:
   push:
     branches:
-      - feature/testing
+      - feature/*
 
 jobs:
   build:
