@@ -26,6 +26,10 @@ class GitCommand {
         }
     }
 
+    test() {
+        return 'test';
+    }
+
     //Command: git commit -m "<message>"
     commit(message){
         if(this.staging.length > 0){
