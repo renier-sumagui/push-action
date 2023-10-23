@@ -6,6 +6,6 @@ describe('Sample Model test', function() {
     it ('Should return true', function() {
         const result = SampleModel.sampleMethod();
 
-        expect(result).to.equal(false);
+        expect(result).to.equal(true);
     });
 })
