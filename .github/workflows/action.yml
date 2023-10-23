@@ -1,18 +1,24 @@
 name: Github Actions Practice
-on: 
-    push:
-        branches:
-            - feature/testing
+
+on:
+  push:
+    branches:
+      - feature/testing
+
 jobs:
-    build:
-        name: Build project
-        runs-on: ubuntu-latest
-        steps:
-            name: Checkout project
-            uses: actions/checkout@v2
-            name: Use Node.js
-            uses: actions/setup-node@v1
-            name: Install dependencies
-            run: npm install
-            name: Test project
-            run: npm test
+  build:
+    name: Build project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Test project
+        run: npm test
